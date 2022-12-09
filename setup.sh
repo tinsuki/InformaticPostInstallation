@@ -9,8 +9,8 @@ sudo chmod +x installApp.sh
 echo '##########################################'
 echo 'Creare Users and Groups'
 echo '##########################################'
-./users.sh
+bash users.sh
 echo '##########################################'
 echo 'Install all apps'
 echo '##########################################'
-./installApp.sh
+bash installApp.sh
