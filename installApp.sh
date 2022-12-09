@@ -1,12 +1,4 @@
 #!/bin/bash
-echo '##########################################'
-echo 'Update syu'
-echo '##########################################'
-sudo pacman -Syu --noconfirm
-echo '##s########################################'
-echo 'Install base-devel'
-echo '##########################################'
-sudo pacman -S --noconfirm base-devel
 if [ -d "visual-studio-code-bin" ]; then
 	rm -Rf visual-studio-code-bin
 fi
