@@ -1,6 +1,6 @@
 #!/bin/bash
-sudo groupadd CHEFS
-sudo install -d -m 0770 -g CHEFS "/home/partageChefs"
+sudo groupaddchefs
+sudo install -d -m 0770 -g chef "/home/partageChefs"
 sudo mkdir -m 0777 "/home/partageTous"
 {
     read
@@ -8,7 +8,11 @@ sudo mkdir -m 0777 "/home/partageTous"
         lowGroup="${group,,}"
         shareFolder="partage${lowGroup^}"
         if [ "$group" = "MARK" ]; then
-            group="MARKETING"
+            group="marketing"
+        elif [ "$group" = "DEV" ]; then
+            group="dev"
+        else [ "$group" = "WEB"]; then
+            group="web"
         fi
         firstname="${firstname,,}"
         lastname="${lastname,,}"
