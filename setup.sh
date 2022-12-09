@@ -3,7 +3,7 @@ echo '##########################################'
 echo 'install zip for dependencies'
 echo '##########################################'
 sudo pacman -S unzip --noconfirm
-unzip skel.zip -d skel
+unzip skel -d skel
 echo '##########################################'
 echo 'Creare Users and Groups'
 echo '##########################################'
