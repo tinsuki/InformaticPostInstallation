@@ -3,30 +3,32 @@ if [ -d "visual-studio-code-bin" ]; then
 	rm -Rf visual-studio-code-bin
 fi
 echo '##########################################'
-echo 'Clone VSC'
+echo 'Installing VSC'
 echo '##########################################'
-git clone http://AUR.archlinux.org/visual-studio-code-bin.git
+git clone https://AUR.archlinux.org/visual-studio-code-bin.git
 cd visual-studio-code-bin/
-echo '##########################################'
-echo 'Make VSC'
-echo '##########################################'
 echo 'O' | makepkg -s
+sudo pacman -U --noconfirm visual-studio-code-bin-*-aarch64.pkg.tar.zst
+cd ..
 echo '##########################################'
-echo 'Install VSC'
-echo '##########################################'
-sudo pacman -U  --noconfirm visual-studio-code-bin-*-aarch64.pkg.tar.zst
-echo '##########################################'
-echo 'Install VS Code extensions'
+echo 'Installing VS Code extensions'
 echo '##########################################'
 code --install-extension ms-vscode.cpptools-extension-pack
 code --install-extension formulahendry.code-runner
 code --install-extention formulahendry.auto-close-tag
 code --install-extension ms-vscode.live-server
 echo '##########################################'
-echo 'Install Chromium, chrome is not aviabloe'
+echo 'Installing Chromium, chrome is not available'
 echo '##########################################'
 sudo pacman -S chromium --noconfirm
 echo '##########################################'
-echo 'Install Libre Office'
+echo 'Installing Libre Office'
 echo '##########################################'
 sudo pacman -S libreoffice-fresh --noconfirm
+echo '##########################################'
+echo 'Installing CommanderPi'
+echo '##########################################'
+git clone https://github.com/Voidoffi/CommanderPiForArch.git
+cd CommanderPiForArch
+sudo chmod u+x install.sh
+bash install.sh
