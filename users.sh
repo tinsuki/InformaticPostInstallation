@@ -5,11 +5,11 @@ sudo mkdir -m 0777 "/home/partageTous"
 {
     read
     while IFS=\; read -r firstname lastname password group; do
-        group="${group,,}"
-        shareFolder="partage${group^}"
         if [ "$group" = "mark" ]; then
             group="marketing"
         fi
+        group="${group,,}"
+        shareFolder="partage${group^}"
         firstname="${firstname,,}"
         lastname="${lastname,,}"
         username="${firstname:0:1}${lastname:0:6}"
