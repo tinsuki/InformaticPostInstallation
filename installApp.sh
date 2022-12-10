@@ -34,3 +34,5 @@ mv CommanderPiForArch CommanderPi
 cd CommanderPi
 sudo chmod u+x install.sh
 bash install.sh
+xrdb -load /dev/null
+xrdb -query
