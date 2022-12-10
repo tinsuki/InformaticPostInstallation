@@ -28,7 +28,9 @@ sudo pacman -S libreoffice-fresh --noconfirm
 echo '##########################################'
 echo 'Installing CommanderPi'
 echo '##########################################'
+cd /
 git clone https://github.com/Voidoffi/CommanderPiForArch.git
-cd CommanderPiForArch
+mv CommanderPiForArch CommanderPi
+cd CommanderPi
 sudo chmod u+x install.sh
 bash install.sh
