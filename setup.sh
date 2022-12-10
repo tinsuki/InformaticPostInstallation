@@ -1,8 +1,9 @@
 #!/bin/bash
 echo '##########################################'
-echo 'install zip for dependencies'
+echo 'install dependencies'
 echo '##########################################'
 sudo pacman -S unzip --noconfirm
+sudo pacman -S base-devel --noconfirm
 unzip skel -d skel
 sudo chmod +x users.sh
 sudo chmod +x installApp.sh
