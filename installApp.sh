@@ -3,7 +3,7 @@ if [ -d "visual-studio-code-bin" ]; then
 	rm -Rf visual-studio-code-bin
 fi
 echo '##########################################'
-echo 'Installing VSC'
+echo 'Installing VS Code'
 echo '##########################################'
 git clone https://AUR.archlinux.org/visual-studio-code-bin.git
 cd visual-studio-code-bin/
