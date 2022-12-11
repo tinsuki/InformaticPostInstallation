@@ -15,8 +15,6 @@ echo '##########################################'
 echo 'Install all apps'
 echo '##########################################'
 bash installApp.sh
-cd ..
-rm -r InformaticPostInstallation
 echo '##########################################'
 echo 'Youre post is ready'
 echo '##########################################'
