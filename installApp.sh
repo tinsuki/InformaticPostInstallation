@@ -11,13 +11,6 @@ echo 'O' | makepkg -s
 sudo pacman -U --noconfirm visual-studio-code-bin-*-aarch64.pkg.tar.zst
 cd ..
 echo '##########################################'
-echo 'Installing VS Code extensions'
-echo '##########################################'
-code --install-extension ms-vscode.cpptools-extension-pack
-code --install-extension formulahendry.code-runner
-code --install-extention formulahendry.auto-close-tag
-code --install-extension ms-vscode.live-server
-echo '##########################################'
 echo 'Installing Chromium, chrome is not available'
 echo '##########################################'
 sudo pacman -S chromium --noconfirm
@@ -36,3 +29,10 @@ sudo chmod u+x install.sh
 bash install.sh
 xrdb -load /dev/null
 xrdb -query
+echo '##########################################'
+echo 'Installing VS Code extensions'
+echo '##########################################'
+code --install-extension ms-vscode.cpptools-extension-pack
+code --install-extension formulahendry.code-runner
+code --install-extention formulahendry.auto-close-tag
+code --install-extension ms-vscode.live-server
