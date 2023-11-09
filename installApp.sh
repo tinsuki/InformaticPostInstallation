@@ -22,7 +22,7 @@ echo '##########################################'
 echo 'Installing CommanderPi'
 echo '##########################################'
 cd ~
-git clone https://github.com/Voidoffi/CommanderPiForArch.git
+git clone https://github.com/EarthKiii/CommanderPiForArch.git
 mv CommanderPiForArch CommanderPi
 cd CommanderPi
 sudo chmod u+x install.sh
